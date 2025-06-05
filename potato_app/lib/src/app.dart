@@ -9,7 +9,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // 첫 화면 : intro.dart의 Intro
-      home: Intro(),
+      // home: Intro(),
+      // NamedRouter 사용(route table 설정)
+      routes: {
+        '/': (context) => Intro(),
+        '/register': (context) => Register(),
+      },
+      initalRoute:'/',  // 초기화면: Intro()
     );
   }
 }
